@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section>
+        <h2>Контакты</h2>
+        <ul>
+            {% for type, detail in portfolio.contacts.items() %}
+                <li><strong>{{ type }}:</strong> {{ detail }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}
