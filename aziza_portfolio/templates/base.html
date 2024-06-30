@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ portfolio.name }}'s Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>{{ portfolio.name }} Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">О себе</a></li>
+                <li><a href="{{ url_for('projects') }}">Проекты</a></li>
+                <li><a href="{{ url_for('contact') }}">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 {{ portfolio.name }}</p>
+    </footer>
+</body>
+</html>

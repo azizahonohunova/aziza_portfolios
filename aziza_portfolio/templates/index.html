@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section>
+        <h2>О себе</h2>
+        <p>{{ portfolio.bio }}</p>
+    </section>
+    <section>
+        <h2>Навыки</h2>
+        <ul>
+            {% for skill in portfolio.skills %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+    <section>
+        <h2>Образование</h2>
+        <ul>
+            {% for edu in portfolio.education %}
+                <li>{{ edu.institution }}: {{ edu.degree }} ({{ edu.years }})</li>
+            {% endfor %}
+        </ul>
+    </section>
+    
+    
+
+    <section>
+        <h2>Опыт работы</h2>
+        <ul>
+            {% for exp in portfolio.experience %}
+    
+                <p>К сожалению, у меня нет официального опыта работы, так как после университета я вышла замуж и посвятила себя семейной жизни. Однако, я готова и стремлюсь начать свою профессиональную карьеру и применить свои знания и навыки на практике.</p>
+           
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}
