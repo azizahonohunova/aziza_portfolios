@@ -18,7 +18,8 @@ portfolio = {
     "contacts": {
         "Email" : "azizahonohunova@gmail.com",
         "GitHub" : "https://github.com/azizahonohunova"
-    }
+    },
+    "myPic": "./images/my_pic.jpg"
 }
 
 @app.route('/')
